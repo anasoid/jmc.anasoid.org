@@ -4,32 +4,30 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's Jmeter as code **JMC in less than 5 minutes**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Get started by **looking to [JMC Example](https://github.com/anasoid/jmc-examples)**.
 
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
+## Create new project using Gradle (Or Maven)
 
-## Generate a new site
+Add dependeny to last version of **org.anasoid.jmc:jmc-core**
 
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
+To access snapshot version use snapshot reposiroty.
 
 ```shell
-cd my-website
-
-npx docusaurus start
+repositories {
+    // Use JCenter for resolving dependencies.
+    mavenCentral()
+    maven {
+        url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
 ```
 
-Your site starts at `http://localhost:3000`.
+## Write your test
 
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+Full support of Jmeter feature all node can be  add config, assertion, listner, ... (Not all protocol are covered, but Http is 100% covered, next protocol to be add wil  be JDBC).
+
+Test an be executed as junit or main method. it's recomanded to execute final test with command line from JMX.

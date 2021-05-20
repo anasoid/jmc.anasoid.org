@@ -1,19 +1,23 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'JMC',
+  tagline: 'Jmeter as code',
+  url: 'https://jmc.anasoid.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'anasoid', // Usually your GitHub org/user name.
+  projectName: 'Jmeter as code', // Usually your repo name.
   themeConfig: {
+    gtag: {
+      trackingID: 'G-CLR0F7M45Z',
+      anonymizeIP: true,
+    },
     navbar: {
-      title: 'My Site',
+      title: 'Jmeter as code',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Jmeter as code',
         src: 'img/logo.svg',
       },
       items: [
@@ -23,9 +27,13 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/anasoid/jmeter-as-code/discussions',
+          position: 'left',
+          label: 'Discussions',
+        },
+        {
+          href: 'https://github.com/anasoid/jmeter-as-code',
           label: 'GitHub',
           position: 'right',
         },
@@ -47,16 +55,8 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Discussions',
+              href: 'https://github.com/anasoid/jmeter-as-code/discussions',
             },
           ],
         },
@@ -64,17 +64,17 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Issues',
+              href: 'https://github.com/anasoid/jmeter-as-code/issues',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/anasoid/jmeter-as-code',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} anasoid.org. `,
     },
   },
   presets: [
@@ -95,6 +95,11 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          trailingSlash: false,
         },
       },
     ],
