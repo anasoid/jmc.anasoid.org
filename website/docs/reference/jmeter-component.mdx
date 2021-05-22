@@ -1,0 +1,203 @@
+---
+sidebar_position: 1
+---
+
+# Jmeter component!
+
+Jmc Classes use the some name of Jmeter class with 'wrapper suffix'.
+
+## Thread Group
+
+All Thread group implements interface **ThreadWrapper**.
+
+| Component                 | covered | class                   | Description      |
+| ------------------------- | ------- | ----------------------- | ---------------- |
+| **Thread Group**          | **yes** | ThreadGroupWrapper      | **Full support** |
+| **setUp Thread Group**    | **yes** | SetupThreadGroupWrapper | **Full support** |
+| **tearDown Thread Group** | **yes** | PostThreadGroupWrapper  | **Full support** |
+
+## Samplers
+
+All samplers implements interface **SamplerWrapper**.
+
+| Component             | covered   | class                  | Description      |
+| --------------------- | --------- | ---------------------- | ---------------- |
+| FTP Request           | no        | -                      | -                |
+| **HTTP Request**      | **yes**   | HTTPSamplerBaseWrapper | **Full support** |
+| JDBC Request          | no        | -                      | Roadmap          |
+| Java Request          | no        | -                      | -                |
+| LDAP Request          | no        | -                      | -                |
+| LDAP Extended Request | no        | -                      | -                |
+| Access Log Sampler    | no        | -                      | -                |
+| BeanShell Sampler     | **never** | -                      | **DEPRECATED**   |
+| **JSR223 Sampler**    | **yes**   | JSR223SamplerWrapper   | **Full support** |
+| TCP Sampler           | no        | -                      | -                |
+| JMS Publisher         | no        | -                      | -                |
+| JMS Subscriber        | no        | -                      | -                |
+| JMS Point-to-Point    | no        | -                      | -                |
+| JUnit Request         | no        | -                      | -                |
+| Mail Reader Sampler   | no        | -                      | -                |
+| Flow Control Action   | no        | -                      | -                |
+| SMTP Sampler          | no        | -                      | -                |
+| OS Process Sampler    | no        | -                      | -                |
+| MongoDB Script        | **never** | -                      | **DEPRECATED**   |
+| Bolt Request          | no        | -                      | -                |
+| **Debug sampler**     | **yes**   | DebugSamplerWrapper    | **Full support** |
+
+## Logic Controllers
+
+All controller implements interface **ControllerWrapper**.
+
+| Component                       | covered | class                            | Description      |
+| ------------------------------- | ------- | -------------------------------- | ---------------- |
+| **Simple Controller**           | **yes** | SimpleControllerWrapper          | **Full support** |
+| **Loop Controller**             | **yes** | LoopControllerWrapper            | **Full support** |
+| **Once Only Controller**        | **yes** | OnceOnlyControllerWrapper        | **Full support** |
+| **Interleave Controller**       | **yes** | InterleaveControlWrapper         | **Full support** |
+| **Random Controller**           | **yes** | RandomControllerWrapper          | **Full support** |
+| **Random Order Controller**     | **yes** | RandomOrderControllerWrapper     | **Full support** |
+| **Throughput Controller**       | **yes** | ThroughputControllerWrapper      | **Full support** |
+| **Runtime Controller**          | no      | RuntimeControllerWrapper         | **Full support** |
+| **If Controller**               | **yes** | IfControllerWrapper              | **Full support** |
+| **While Controller**            | **yes** | WhileControllerWrapper           | **Full support** |
+| **Switch Controller**           | **yes** | SwitchControllerWrapper          | **Full support** |
+| **ForEach Controller**          | **yes** | ForeachControllerWrapper         | **Full support** |
+| Module Controller               | no      | -                                | -                |
+| Include Controller              | no      | -                                | -                |
+| **Transaction Controller**      | **yes** | TransactionControllerWrapper     | **Full support** |
+| **Recording Controller**        | **yes** | RecordingControllerWrapper       | **Full support** |
+| **Critical Section Controller** | **yes** | CriticalSectionControllerWrapper | **Full support** |
+
+## Listeners
+
+All listeners implements interface **SampleListenerWrapper**.
+
+| Component                           | covered   | class                                | Description      |
+| ----------------------------------- | --------- | ------------------------------------ | ---------------- |
+| **Graph Results**                   | **yes**   | GraphVisualizerWrapper               | **Full support** |
+| **Assertion Results**               | **yes**   | ResultCollectorWrapper               | **Full support** |
+| **View Results Tree**               | **yes**   | ViewResultsFullVisualizerWrapper     | **Full support** |
+| **Aggregate Report**                | **yes**   | AggregateReportWrapper               | **Full support** |
+| **View Results in Table**           | **yes**   | TableVisualizerWrapper               | **Full support** |
+| **Simple Data Writer**              | **yes**   | SimpleDataWriterWrapper              | **Full support** |
+| **Aggregate Graph**                 | **yes**   | AggregateGraphWrapper                | **Full support** |
+| \*\*Response Time Graph             | no        | -                                    | -                |
+| Mailer Visualizer                   | no        | -                                    | -                |
+| BeanShell Listener                  | **never** | -                                    | **DEPRECATED**   |
+| **Summary Report**                  | **yes**   | SummaryReportWrapper                 | **Full support** |
+| **Save Responses to a file**        | **yes**   | -                                    | **Full support** |
+| **JSR223 Listener**                 | **yes**   | JSR223ListenerWrapper                | **Full support** |
+| **Generate Summary Results**        | **yes**   | SummariserWrapper                    | **Full support** |
+| **Comparison Assertion Visualizer** | **yes**   | ComparisonAssertionVisualizerWrapper | **Full support** |
+| **Backend Listener**                | **yes**   | BackendListenerWrapper               | **Full support** |
+
+## Configuration Elements
+
+All configuration elements implements interface **ConfigElementWrapper**.
+
+| Component                      | covered   | class                       | Description      |
+| ------------------------------ | --------- | --------------------------- | ---------------- |
+| **CSV Data Set Config**        | **yes**   | CSVDataSetWrapper           | **Full support** |
+| FTP Request Defaults           | no        | -                           | -                |
+| DNS Cache Manager              | no        | -                           | -                |
+| **HTTP Authorization Manager** | **yes**   | AuthManagerWrapper          | **Full support** |
+| **HTTP Cache Manager**         | **yes**   | CacheManagerWrapper         | **Full support** |
+| **HTTP Cookie Manager**        | **yes**   | CookieManagerWrapper        | **Full support** |
+| **HTTP Request Defaults**      | **yes**   | HttpDefaultsWrapper         | **Full support** |
+| **HTTP Header Manager**        | **yes**   | HeaderManagerWrapper        | **Full support** |
+| Java Request Defaults          | no        | -                           | -                |
+| JDBC Connection Configuration  | no        | -                           | -                |
+| Keystore Configuration         | no        | -                           | -                |
+| Login Config Element           | yes       | -                           | -                |
+| LDAP Request Defaults          | no        | -                           | -                |
+| LDAP Extended Request Defaults | no        | -                           | -                |
+| TCP Sampler Config             | no        | -                           | -                |
+| User Defined Variables         | **yes**   | ArgumentsWrapper            | **Full support** |
+| **Random Variable**            | **yes**   | RandomVariableConfigWrapper | **Full support** |
+| **Counter**                    | **yes**   | CounterConfigWrapper        | **Full support** |
+| Simple Config Element          | no        | -                           | -                |
+| MongoDB Source Config          | **never** | -                           | **DEPRECATED**   |
+| Bolt Connection Configuration  | no        | -                           | -                |
+
+## Assertions
+
+All Assertions implements interface **AssertionWrapper**.
+
+| Component                   | covered   | class                     | Description      |
+| --------------------------- | --------- | ------------------------- | ---------------- |
+| **Response Assertion**      | **yes**   | ResponseAssertionWrapper  | **Full support** |
+| **Duration Assertion**      | **yes**   | DurationAssertionWrapper  | **Full support** |
+| **Size Assertion**          | **yes**   | SizeAssertionWrapper      | **Full support** |
+| **XML Assertion**           | **yes**   | XMLAssertionWrapper       | **Full support** |
+| BeanShell Assertion         | **never** | -                         | **DEPRECATED**   |
+| **MD5Hex Assertion**        | **yes**   | MD5HexAssertionWrapper    | **Full support** |
+| **HTML Assertion**          | **yes**   | HTMLAssertionWrapper      | **Full support** |
+| **XPath Assertion**         | **yes**   | XPathAssertionWrapper     | **Full support** |
+| **XPath2 Assertion**        | **yes**   | XPath2AssertionWrapper    | **Full support** |
+| **XML Schema Assertion**    | **yes**   | XMLSchemaAssertionWrapper | **Full support** |
+| **JSR223 Assertion**        | **yes**   | JSR223AssertionWrapper    | **Full support** |
+| Compare Assertion           | no        | -                         | -                |
+| SMIME Assertion             | no        | -                         | -                |
+| **JSON Assertion**          | **yes**   | JSONPathAssertionWrapper  | **Full support** |
+| **JSON JMESPath Assertion** | **yes**   | JMESPathAssertionWrapper  | **Full support** |
+
+## Timers
+
+All timers implements interface **timers**.
+
+| Component                     | covered   | class                          | Description      |
+| ----------------------------- | --------- | ------------------------------ | ---------------- |
+| **Constant Timer**            | **yes**   | ConstantTimerWrapper           | **Full support** |
+| **Gaussian Random Timer**     | **yes**   | GaussianRandomTimerWrapper     | **Full support** |
+| **Uniform Random Timer**      | **yes**   | UniformRandomTimerWrapper      | **Full support** |
+| **Constant Throughput Timer** | **yes**   | ConstantThroughputTimerWrapper | **Full support** |
+| **Precise Throughput Timer**  | **yes**   | PreciseThroughputTimerWrapper  | **Full support** |
+| **Synchronizing Timer**       | **yes**   | SyncTimerWrapper               | **Full support** |
+| **BeanShell Timer**           | **never** | -                              | **DEPRECATED**   |
+| **JSR223 Timer**              | **yes**   | JSR223TimerWrapper             | **Full support** |
+| **Poisson Random Timer**      | **yes**   | PoissonRandomTimerWrapper      | **Full support** |
+
+## Pre-Processors
+
+All Pre-Processors implements interface **PreProcessorWrapper**.
+
+| Component                        | covered   | class                       | Description      |
+| -------------------------------- | --------- | --------------------------- | ---------------- |
+| **HTML Link Parser**             | **yes**   | AnchorModifierWrapper       | **Full support** |
+| **HTTP URL Re-writing Modifier** | **yes**   | URLRewritingModifierWrapper | **Full support** |
+| **User Parameters**              | **yes**   | -                           | **Full support** |
+| **BeanShell PreProcessor**       | **never** | -                           | **DEPRECATED**   |
+| **JSR223 PreProcessor**          | **yes**   | JSR223PreProcessorWrapper   | **Full support** |
+| **JDBC PreProcessor**            | no        | -                           | Roadmap          |
+| **RegEx User Parameters**        | **yes**   | RegExUserParametersWrapper  | **Full support** |
+| **Sample Timeout**               | **yes**   | SampleTimeoutWrapper        | **Full support** |
+
+## Post-Processors
+
+All Assertions implements interface **PostProcessorWrapper**.
+
+| Component                                               | covered   | class                      | Description      |
+| ------------------------------------------------------- | --------- | -------------------------- | ---------------- |
+| **Regular Expression Extractor**                        | **yes**   | RegexExtractorWrapper      | **Full support** |
+| **CSS Selector Extractor** (was: CSS/JQuery Extractor ) | **yes**   | HtmlExtractorWrapper       | **Full support** |
+| **XPath2 Extractor**                                    | **yes**   | XPath2ExtractorWrapper     | **Full support** |
+| **XPath Extractor**                                     | **yes**   | XPathExtractorWrapper      | **Full support** |
+| **JSON JMESPath Extractor**                             | **yes**   | JMESPathExtractorWrapper   | **Full support** |
+| **Result Status Action Handler**                        | **yes**   | ResultActionWrapper        | **Full support** |
+| **BeanShell PostProcessor**                             | **never** | -                          | **DEPRECATED**   |
+| **JSR223 PostProcessor**                                | **yes**   | JSR223PostProcessorWrapper | **Full support** |
+| **JDBC PostProcessor**                                  | no        | -                          | **Full support** |
+| **JSON Extractor**                                      | **yes**   | JSON Extractor             | **Full support** |
+| **Boundary Extractor**                                  | **yes**   | BoundaryExtractorWrapper   | **Full support** |
+| **Debug PostProcessor**                                 | **yes**   | DebugPostProcessorWrapper  | **Full support** |
+
+## Miscellaneous Features
+
+| Component                                              | covered | class           | Description      |
+| ------------------------------------------------------ | ------- | --------------- | ---------------- |
+| **Test Plan**                                          | **yes** | TestPlanWrapper | **Full support** |
+| SSL Manager                                            | no      | -               | **Full support** |
+| HTTP(S) Test Script Recorder (was: HTTP Proxy Server ) | no      | -               | **Full support** |
+| HTTP Mirror Server                                     | no      | -               | **Full support** |
+| Property Display                                       | no      | -               | **Full support** |
+| Test Fragment                                          | no      | -               | **Full support** |
