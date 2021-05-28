@@ -18,14 +18,20 @@ module.exports = {
       title: 'Jmeter as code',
       logo: {
         alt: 'Jmeter as code',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'tuto/intro',
           position: 'left',
           label: 'Tutorial',
+        },
+        {
+          type: 'doc',
+          docId: 'reference/intro',
+          position: 'left',
+          label: 'Reference',
         },
         {
           href: 'https://github.com/anasoid/jmeter-as-code/discussions',
@@ -47,7 +53,11 @@ module.exports = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: 'docs/tuto/intro',
+            },
+            {
+              label: 'Reference',
+              to: 'reference/intro',
             },
           ],
         },
@@ -85,13 +95,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/anasoid/jmc.anasoid.org/edit/master/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/anasoid/jmc.anasoid.org/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
