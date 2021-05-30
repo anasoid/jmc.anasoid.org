@@ -23,6 +23,18 @@ module.exports = {
       items: [
         {
           type: 'doc',
+          docId: 'users/intro',
+          position: 'left',
+          label: 'Users guide',
+        },
+        {
+          type: 'doc',
+          docId: 'developers/intro',
+          position: 'left',
+          label: 'Developers guide',
+        },
+        {
+          type: 'doc',
           docId: 'tuto/intro',
           position: 'left',
           label: 'Tutorial',

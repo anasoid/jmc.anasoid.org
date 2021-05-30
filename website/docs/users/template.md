@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Tutorial Intro
+# Template
 
 Let's Jmeter as code **JMC in less than 5 minutes**.
 
