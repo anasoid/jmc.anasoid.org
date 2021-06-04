@@ -13,8 +13,6 @@ Functions can have multiple signature depend on optional parameters.
 
 
 ```jsx
-JmeterFunctions.property("SERVER_PORT", "443") // return ${__property(SERVER_PORT,,443)}
+JmeterFunctions.property("SERVER_PORT", "443"); // return ${__property(SERVER_PORT,,443)}
 
-
-}
 ```

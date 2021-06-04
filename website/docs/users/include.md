@@ -2,32 +2,106 @@
 sidebar_position: 70
 ---
 
-# Include
+# JMX Include
 
-Let's Jmeter as code **JMC in less than 5 minutes**.
+Jmx include let you include JMX fragment in your code. This can help for Component who are not yet available in JMC.
 
-## Getting Started
+Depend on the node type you want to include use the following Class.
 
-Get started by **looking to [JMC Example](https://github.com/anasoid/jmc-examples)**.
+| Type                       | Class                          | children types       |
+| -------------------------- | ------------------------------ | -------------------- |
+| **Thread Group**           | ThreadGroupJmxIncludeWrapper   | Controllers/Samplers |
+| **Controllers**            | ControllerJmxIncludeWrapper    | Controllers/Samplers |
+| **Samplers**               | SamplerJmxIncludeWrapper       | Samplers             |
+| **Configuration Elements** | ConfigElementJmxIncludeWrapper | -                    |
+| **Pre-Processors**         | PreProcessorJmxIncludeWrapper  | -                    |
+| **Post-Processors**        | PostProcessorJmxIncludeWrapper | -                    |
+| **Timers**                 | TimerJmxIncludeWrapper         | -                    |
+| **Assertions**             | AssertionJmxIncludeWrapper     | -                    |
+| **Listeners**              | ListenerJmxIncludeWrapper      | -                    |
 
-## Create new project using Gradle (Or Maven)
+> when you extend from a Wrapper class you have to annotated class with _'@SuperBuilder(setterPrefix = "with", toBuilder = true)'_ . Full package is _lombok.experimental.SuperBuilder_
 
-Add dependeny to last version of **org.anasoid.jmc:jmc-core**
+Important Method to be used with JMX include are :
 
-To access snapshot version use snapshot reposiroty.
+**withPath :** give the resource path of JMX file.
+**withParams :** Input Map for parametrized file.
 
-```shell
-repositories {
-    // Use JCenter for resolving dependencies.
-    mavenCentral()
-    maven {
-        url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-    }
-}
+## JMX File
+
+To have the JMX file you can save any node in Jmeter using the menu **"save as Test Fragment"**.
+
+## Parameterized file.
+
+You can replace any text in JMX fragment to be replaced dynamically by code.
+JMC parameter have the following format ${jmc.**paramname**}: EX :
+Chose parameter name : for example "displayJMeterProperties", in JMX file replace content by ${jmc.displayJMeterProperties}
+
+Ex:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="false"/>
+    <hashTree>
+      <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+        <boolProp name="displayJMeterProperties">${jmc.displayJMeterProperties}</boolProp>
+        <boolProp name="displayJMeterVariables">true</boolProp>
+        <boolProp name="displaySystemProperties">false</boolProp>
+      </DebugSampler>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
 ```
 
-## Write your test
+Input parameters can be provided using **withParams** method, or with @JmcParam annotation when using subClass.
 
-Full support of Jmeter feature all node can be  add config, assertion, listner, ... (Not all protocol are covered, but Http is 100% covered, next protocol to be add wil  be JDBC).
+## Two way are available to use JMX include.
 
-Test an be executed as junit or main method. it's recomanded to execute final test with command line from JMX.
+### Using extends
+
+Extends from the Class of your type and override method **getDefaultPath** to return the resource path of JMX file.
+
+Ex :
+
+```jsx
+@SuperBuilder(setterPrefix = "with", toBuilder = true)
+public class DebugSamplerJmxIncludeWrapperTesting extends SamplerJmxIncludeWrapper {
+
+  private static final String PARENT_PATH = "org/anasoid/jmc/core/wrapper/jmeter/jmc/generic";
+
+  void DebugSamplerJmxIncludeWrapperTesting(boolean displayJMeterProperties){
+     this.displayJMeterProperties=displayJMeterProperties;
+  }
+
+  @JmcParam("displayJMeterProperties")
+  private static final Boolean displayJMeterProperties = false;
+
+  @Override
+  protected String getDefaultPath() {
+    return "org/myproject/jmx/include/debugsampler.jmx";
+  }
+}
+
+```
+
+### Using Direct Class
+
+To use direct Class you can use the class of your type and give the path of JMX file.
+
+```jsx
+    TestPlanWrapper testPlanWrapper =
+        TestPlanWrapper.builder()
+            .addThread(
+                ThreadGroupWrapper.builder()
+                    .addSampler(
+                        SamplerJmxIncludeWrapper.builder()
+                            .withPath("org/myproject/jmx/include/debugsampler.jmx")
+                            .withParams(Map.of("displayJMeterProperties", "true"))
+                            .build())
+                    .build())
+            .build();
+
+```

@@ -40,13 +40,6 @@ module.exports = {
       collapsed: false,
       items: [
         'tuto/intro',
-        {
-          type: 'category',
-          label: 'tutorial basics',
-          items: [
-            'tuto/tutorial-basics/create-a-blog-post',
-            'tuto/tutorial-basics/create-a-document'],
-        },
       ]
 
     },
