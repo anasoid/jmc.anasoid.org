@@ -8,7 +8,7 @@ module.exports = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'anasoid', // Usually your GitHub org/user name.
-  projectName: 'Jmeter as code', // Usually your repo name.
+  projectName: 'jmc.anasoid.org', // Usually your repo name.
   themeConfig: {
     gtag: {
       trackingID: 'G-CLR0F7M45Z',
