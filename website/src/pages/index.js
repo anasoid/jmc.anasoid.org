@@ -29,8 +29,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Jmeter as code`}
+      description="Jmeter as code, JMC, Jmeter DSL, test performance">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
