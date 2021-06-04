@@ -1,16 +1,14 @@
 ---
-sidebar_position: 2
+sidebar_position: 70
 ---
 
-# Builder
+# Include
 
-JMC is based on **[Lombok](https://projectlombok.org/features/experimental/SuperBuilder)** to generate builder.
+Let's Jmeter as code **JMC in less than 5 minutes**.
 
-## Test Tree
+## Getting Started
 
-You can add testElement to tree on builder like you do using GUI.
-
-
+Get started by **looking to [JMC Example](https://github.com/anasoid/jmc-examples)**.
 
 ## Create new project using Gradle (Or Maven)
 

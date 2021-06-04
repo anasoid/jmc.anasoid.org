@@ -1,33 +1,45 @@
 ---
-sidebar_position: 4
+sidebar_position: 50
 ---
 
 # Interceptor
 
-Let's Jmeter as code **JMC in less than 5 minutes**.
+org.anasoid.jmc.core.application.interceptors.**PrepareInterceptor** can change Wrappers tree before generating final JMX.
 
-## Getting Started
+## Example
 
-Get started by **looking to [JMC Example](https://github.com/anasoid/jmc-examples)**.
+Add a default wait for each sampler having a tag "wait"
 
-## Create new project using Gradle (Or Maven)
+Ex
 
-Add dependeny to last version of **org.anasoid.jmc:jmc-core**
+```jsx
+public class WaitInterceptor implements PrepareInterceptor {
 
-To access snapshot version use snapshot reposiroty.
+  @Override
+  public boolean support(TestElementWrapper<?> testElementWrapper) {
+    return testElementWrapper.getTags().contains("wait"))
+        && testElementWrapper instanceof HTTPSamplerProxyWrapper;
+  }
 
-```shell
-repositories {
-    // Use JCenter for resolving dependencies.
-    mavenCentral()
-    maven {
-        url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-    }
+  @Override
+  public void prepare(TestElementWrapper<?> testElementWrapper) {
+    HTTPSamplerProxyWrapper sampler = (HTTPSamplerProxyWrapper) testElementWrapper;
+
+    sampler.getChilds().add(
+        UniformRandomTimerWrapper.builder()
+            .withName("Wait default")
+            .withDelay(0)
+            .withRandom(20)
+            .build());
+  }
 }
+
 ```
 
-## Write your test
+ApplicationTest accept a list of Interceptors.
 
-Full support of Jmeter feature all node can be  add config, assertion, listner, ... (Not all protocol are covered, but Http is 100% covered, next protocol to be add wil  be JDBC).
+```jsx
 
-Test an be executed as junit or main method. it's recomanded to execute final test with command line from JMX.
+    ApplicationTest applicationTest = new ApplicationTest(new HelloTestPlan().generate(),
+        Arrays.asList(new WaitInterceptor()));
+```

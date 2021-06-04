@@ -1,0 +1,63 @@
+---
+sidebar_position: 10
+---
+
+# Jmeter functions
+
+Jmc give a Java way to call Jmeter functions :
+
+## Function List
+
+| Type        | Name                   | Covered   | Only JMC | Description                                                                                    |
+| ----------- | ---------------------- | --------- | -------- | ---------------------------------------------------------------------------------------------- |
+| Information | threadNum              | ✅        |          | get thread number                                                                              |
+| Information | threadGroupName        | ✅        |          | get thread group name                                                                          |
+| Information | samplerName            | ✅        |          | get the sampler name (label)                                                                   |
+| Information | machineIP              | ✅        |          | get the local machine IP address                                                               |
+| Information | machineName            | ✅        |          | get the local machine name                                                                     |
+| Information | time                   | ✅        |          | return current time in various formats                                                         |
+| Information | timeShift              | ✅        |          | return a date in various formats with the specified amount of seconds/minutes/hours/days added |
+| Information | log                    | ✅        |          | log (or display) a message (and return the value)                                              |
+| Information | logn                   | ✅        |          | log (or display) a message (empty return value)                                                |
+| Input       | StringFromFile         | ❌        |          | read a line from a file                                                                        |
+| Input       | FileToString           | ❌        |          | read an entire file                                                                            |
+| Input       | CSVRead                | ❌        |          | read from CSV delimited file                                                                   |
+| Input       | XPath                  | ❌        |          | Use an XPath expression to read from a file                                                    |
+| Input       | StringToFile           | ❌        |          | write a string to a file                                                                       |
+| Calculation | counter                | ✅        |          | generate an incrementing number                                                                |
+| Formatting  | dateTimeConvert        | ❌        |          | Convert a date or time from source to target format                                            |
+| Calculation | digest                 | ❌        |          | Generate a digest (SHA-1, SHA-256, MD5...)                                                     |
+| Calculation | intSum                 | ❌        |          | add int numbers                                                                                |
+| Calculation | longSum                | ❌        |          | add long numbers                                                                               |
+| Calculation | Random                 | ✅        |          | generate a random lowercase alpha value (based on **RandomString** )                           |
+| Calculation | randomAlpha            | ✅        | ✅       | generate a random lowercase alpha numeric value (based on **RandomString** )                   |
+| Calculation | randomAlphaNumeric     | ✅        | ✅       | generate a random number                                                                       |
+| Calculation | RandomDate             | ✅        |          | generate random date within a specific date range                                              |
+| Calculation | RandomFromMultipleVars | ❌        |          | extracts an element from the values of a set of Variables separated by \|                      |
+| Calculation | RandomString           | ✅        |          | generate a random string                                                                       |
+| Calculation | UUID                   | ✅        |          | generate a random type 4 UUID                                                                  |
+| Scripting   | groovy                 | ✅        |          | run an Apache Groovy script                                                                    |
+| Scripting   | BeanShell              | **never** |          | run a BeanShell script                                                                         |
+| Scripting   | javaScript             | ✅        |          | process JavaScript (Nashorn)                                                                   |
+| Scripting   | jexl2                  | ✅        |          | evaluate a Commons Jexl2 expression                                                            |
+| Scripting   | jexl3                  | ✅        |          | evaluate a Commons Jexl3 expression                                                            |
+| Properties  | isPropDefined          | ✅        |          | Test if a property exists                                                                      |
+| Properties  | property               | ✅        |          | read a property                                                                                |
+| Properties  | P                      | **never** |          | read a property (shorthand method)                                                             |
+| Properties  | setProperty            | ✅        |          | set a JMeter property                                                                          |
+| Variables   | split                  | ❌        |          | Split a string into Variables                                                                  |
+| Variables   | eval                   | ✅        |          | evaluate a variable expression                                                                 |
+| Variables   | evalVar                | ✅        |          | evaluate an expression stored in a variable                                                    |
+| Properties  | isVarDefined           | ✅        |          | Test if a variable exists                                                                      |
+| Variables   | V                      | ❌        |          | evaluate a variable name                                                                       |
+| String      | char                   | ❌        |          | generate Unicode char values from a list of numbers                                            |
+| String      | changeCase             | ❌        |          | Change case following different modes                                                          |
+| String      | escapeHtml             | ❌        |          | Encode strings using HTML encoding                                                             |
+| String      | escapeOroRegexpChars   | ❌        |          | quote meta chars used by ORO regular expression                                                |
+| String      | escapeXml              | ❌        |          | Encode strings using XMl encoding                                                              |
+| String      | regexFunction          | ❌        |          | parse previous response using a regular expression                                             |
+| String      | unescape               | ❌        |          | Process strings containing Java escapes (e.g. \n & \t)                                         |
+| String      | unescapeHtml           | ❌        |          | Decode HTML-encoded strings                                                                    |
+| String      | urldecode              | ❌        |          | Decode a application/x-www-form-urlencoded string                                              |
+| String      | urlencode              | ❌        |          | Encode a string to a application/x-www-form-urlencoded string                                  |
+| String      | TestPlanName           | ✅        |          | Return name of current test plan                                                               |
