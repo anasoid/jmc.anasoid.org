@@ -37,7 +37,7 @@ ApplicationTest take a testPlan and Interceptors than it can generate JMX file o
    * @param out Destination output.
    * @throws IOException – If an I/O error occurs.
    */
-  public TestElementWrapper toJmx(Writer out) throws IOException { // NOSONAR
+  public TestElementWrapper toJmx(Writer out) throws IOException { 
 . . .
   }
 
@@ -47,7 +47,7 @@ ApplicationTest take a testPlan and Interceptors than it can generate JMX file o
    * @param file Destination output.
    * @throws IOException – If an I/O error occurs.
    */
-  public TestElementWrapper toJmx(File file) throws IOException { // NOSONAR
+  public TestElementWrapper toJmx(File file) throws IOException { 
 . . .
   }
 

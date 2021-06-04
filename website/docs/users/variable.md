@@ -17,6 +17,6 @@ the folwing method are available
 
 
 
-Most component using variable in component accept Variable than string or only variable.
+Most component using variable in Jmeter accept Variable than string or only variable.
 
 Ex : Csv input Component accept list of variables and doesn't accept String with comma separator.

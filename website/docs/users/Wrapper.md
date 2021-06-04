@@ -10,13 +10,27 @@ Each test element use the same name of the origin test element but with suffix W
 
 Wrapper can be instantiated directly but it's recommended to use builder.
 
+## [Node types](/docs/reference/jmeter/jmeter-component)
+
+1. **Test Plan** : Test Plan has the wrapper **TestPlanWrapper**.
+1. **Thread Group** : All Thread group implements interface **ThreadWrapper**.
+1. **Samplers** : All samplers implements interface **SamplerWrapper**.
+1. **Logic Controllers** : All controller implements interface **ControllerWrapper**.
+1. **Listeners** : All listeners implements interface **SampleListenerWrapper**.
+1. **Configuration Elements** : All configuration elements implements interface **ConfigElementWrapper**.
+1. **Assertions** : All Assertions implements interface **AssertionWrapper**.
+1. **Timers** : All timers implements interface **timers**.
+1. **Pre-Processors** :All Pre-Processors implements interface **PreProcessorWrapper**.
+1. **Post-Processors** : All Post-Processors implements interface **PostProcessorWrapper**.
+
+
 
 # Builder
 JMC is based on **[Lombok SuperBuilder](https://projectlombok.org/features/experimental/SuperBuilder)** to generate builder.
 
 ## Builder
 
-You can get the builder of componenet calling the static method builder() on type.
+You can get the builder of component calling the static method builder() on type.
 
 ## Simple Attribute
 
@@ -37,7 +51,7 @@ For same simple object a simplified add method is present, for example : argumen
 
 ### childs (AKA children)
 
-Childs attrbutes contain the list of children of testElement they are equivalent the children nodes in GUI.
+Childs attribute contain the list of children of testElement they are equivalent the children nodes in GUI.
 addChild/addChilds are not available but depends of node type the correct method is available :
 
 | Methods                           | Available for                      |
@@ -53,6 +67,9 @@ addChild/addChilds are not available but depends of node type the correct method
 | addPostProcessor/addPostProcessors | TestPlan/Thread/Controller/Sampler |
 | addTimer/addTimers                 | TestPlan/Thread/Controller/Sampler |
 | addAssertion/addAssertions         | TestPlan/Thread/Controller/Sampler |
+
+
+
 
 ### Tags
 
