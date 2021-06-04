@@ -77,7 +77,7 @@ module.exports = {
             },
             {
               label: 'Reference',
-              to: 'reference/intro',
+              to: 'docs/reference/intro',
             },
           ],
         },
