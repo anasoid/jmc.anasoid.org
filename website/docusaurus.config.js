@@ -9,6 +9,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'anasoid', // Usually your GitHub org/user name.
   projectName: 'jmc.anasoid.org', // Usually your repo name.
+  plugins: [require.resolve('docusaurus-lunr-search')],
   themeConfig: {
     prism: {
       additionalLanguages: ['java','bash'],
