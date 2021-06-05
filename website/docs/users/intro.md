@@ -50,14 +50,13 @@ Last snapshot version is master-SNAPSHOT.
 
 ```
 
-It's recommended to use last stable version:
+It's recommended to use last stable version.
 
-:::tip use last version
-```shell
+:::tip use last version ![Maven Central](https://img.shields.io/maven-central/v/org.anasoid.jmc/jmc-core?label=%20&style=flat-square)
 
-        implementation 'org.anasoid.jmc:jmc-core:v0.1.0'
+implementation 'org.anasoid.jmc:jmc-core:![Maven Central](https://img.shields.io/maven-central/v/org.anasoid.jmc/jmc-core?label=%20&style=flat-square)'
 
-```
+
 :::
 
 ## Configuration
