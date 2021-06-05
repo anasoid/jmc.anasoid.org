@@ -6,7 +6,11 @@ sidebar_position: 80
 
 JMC has it own properties files to manage properties for configuration see **[reference](/docs/reference/intro)**.
 
-> Class org.anasoid.jmc.core.config.JmcConfig give access to read property value.
+:::important 
+
+Class org.anasoid.jmc.core.config.**JmcConfig** give access to read property value.
+
+:::
 
 #### JMC read properties in order from the following inputs, last input can override values :
 

@@ -20,12 +20,18 @@ Depend on the node type you want to include use the following Class.
 | **Assertions**             | AssertionJmxIncludeWrapper     | -                    |
 | **Listeners**              | ListenerJmxIncludeWrapper      | -                    |
 
-> when you extend from a Wrapper class you have to annotated class with _'@SuperBuilder(setterPrefix = "with", toBuilder = true)'_ . Full package is _lombok.experimental.SuperBuilder_
+:::important Extend Wrapper
+ when you extend from a Wrapper class you have to annotated class with _'@SuperBuilder(setterPrefix = "with", toBuilder = true)'_ . Full package is _lombok.experimental.SuperBuilder_
 
+:::
+
+
+### Methods
 Important Method to be used with JMX include are :
 
-**withPath :** give the resource path of JMX file.
-**withParams :** Input Map for parametrized file.
+1. **withPath :** give the resource path of JMX file.
+2. **withParams :** Input Map for parametrized file.
+
 
 ## JMX File
 

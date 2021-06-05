@@ -87,7 +87,9 @@ In this test we add sampler home as contactus with variable 'email'.
 
 org.anasoid.jmc.core.wrapper.template.samplers.http.**SimplePageTemplate** is helper to construct template with the following attribute name,domain,path, method
 
-> It's recommended to extend from SimplePageTemplate and use constructor without argument.
+:::important Extend Wrapper
+It's recommended to extend from **SimplePageTemplate** and use constructor without argument.
+:::
 
 ## SimplePageControllerTemplate
 
