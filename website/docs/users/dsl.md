@@ -8,12 +8,12 @@ DSL are Helper classes in the package **org.anasoid.jmc.core.dsl** that give a q
 
 ## Example
 
-```jsx
+```java
 HttpSamplerDsl.get("Home Page", "/");
 ```
 
 Equivalent to:
 
-```jsx
+```java
 HTTPSamplerProxyWrapper.builder().withName("Home Page").withPath("/");
 ```

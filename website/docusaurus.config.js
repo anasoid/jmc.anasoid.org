@@ -10,6 +10,9 @@ module.exports = {
   organizationName: 'anasoid', // Usually your GitHub org/user name.
   projectName: 'jmc.anasoid.org', // Usually your repo name.
   themeConfig: {
+    prism: {
+      additionalLanguages: ['java','bash'],
+    },
     gtag: {
       trackingID: 'G-CLR0F7M45Z',
       anonymizeIP: true,

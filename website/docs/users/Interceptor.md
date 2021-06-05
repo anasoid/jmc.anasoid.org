@@ -12,7 +12,7 @@ Add a default wait for each sampler having a tag "wait"
 
 Ex
 
-```jsx
+```java
 public class WaitInterceptor implements PrepareInterceptor {
 
   @Override
@@ -38,7 +38,7 @@ public class WaitInterceptor implements PrepareInterceptor {
 
 ApplicationTest accept a list of Interceptors.
 
-```jsx
+```java
 
     ApplicationTest applicationTest = new ApplicationTest(new HelloTestPlan().generate(),
         Arrays.asList(new WaitInterceptor()));

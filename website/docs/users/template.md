@@ -20,7 +20,7 @@ AbstractJmcTemplate has 3 methods to override:
 
 Home Page is a simple template, we can use it whn needed with calling constructor (new HomePageTemplate())
 
-```jsx
+```java
 
 public class HomePageTemplate
     extends AbstractJmcTemplate<
@@ -36,7 +36,7 @@ public class HomePageTemplate
 
 Contact us is Http Sampler with email as input.
 
-```jsx
+```java
 
 public class ContactUsPageTemplate
     extends AbstractJmcTemplate<
@@ -70,7 +70,7 @@ public class ContactUsPageTemplate
 
 In this test we add sampler home as contactus with variable 'email'.
 
-```jsx
+```java
 
 
     TestPlanWrapper testPlanWrapper =

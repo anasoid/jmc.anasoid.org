@@ -66,7 +66,7 @@ Extends from the Class of your type and override method **getDefaultPath** to re
 
 Ex :
 
-```jsx
+```java
 @SuperBuilder(setterPrefix = "with", toBuilder = true)
 public class DebugSamplerJmxIncludeWrapperTesting extends SamplerJmxIncludeWrapper {
 
@@ -91,7 +91,7 @@ public class DebugSamplerJmxIncludeWrapperTesting extends SamplerJmxIncludeWrapp
 
 To use direct Class you can use the class of your type and give the path of JMX file.
 
-```jsx
+```java
     TestPlanWrapper testPlanWrapper =
         TestPlanWrapper.builder()
             .addThread(

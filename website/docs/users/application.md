@@ -10,7 +10,7 @@ ApplicationTest take a testPlan and Interceptors than it can generate JMX file o
 
 ### Big View on code:
 
-```jsx
+```java
   /**
    * create application test.
    *
