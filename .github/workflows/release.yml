@@ -1,4 +1,4 @@
-name: documentation
+name: release
 
 on:
   push:
@@ -12,24 +12,6 @@ defaults:
     working-directory: ./website
 
 jobs:
-  checks:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Test Build
-        run: |
-          if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-            npm ci
-          else
-            npm i
-          fi
-            yarn run build
-
   gh-release:
     runs-on: ubuntu-latest
     steps:
