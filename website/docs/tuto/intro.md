@@ -8,13 +8,13 @@ Let's Jmeter as code **JMC in less than 5 minutes**.
 
 ## Getting Started
 
-Get started by **looking to [JMC Example](https://github.com/anasoid/jmc-examples)**.
+Get started by **looking to [JMC Example](https://github.com/anasoid/jmc-examples)** and **[Users guide](/docs/users/intro)**.
 
 ## Create a new project using Gradle (Or Maven).
 
-Add a dependeny to the last version of **org.anasoid.jmc:jmc-core**
+Add a dependency to the last version of **org.anasoid.jmc:jmc-core**
 
-To access the snapshot version use snapshot reposiroty.
+To access the snapshot version use snapshot repository.
 
 ```shell
 repositories {
@@ -30,4 +30,4 @@ repositories {
 
 Full support of Jmeter features, all nodes can add config, assertions, listeners, ... (Not all protocols are covered, but Http is 100% covered, and next protocol to be added will be JDBC).
 
-Tests can be executed as junit or main method. it's recomanded to execute final tests with the command line from JMX.
+Tests can be executed as junit or main method. it's recommended to execute final tests with the command line from JMX.

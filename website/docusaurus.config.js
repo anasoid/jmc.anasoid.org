@@ -33,12 +33,6 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'developers/intro',
-          position: 'left',
-          label: 'Developers guide',
-        },
-        {
-          type: 'doc',
           docId: 'tuto/intro',
           position: 'left',
           label: 'Tutorial',
