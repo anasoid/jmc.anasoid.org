@@ -16,8 +16,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/tuto/intro">
-            Jmeter as code Tutorial - 5min ⏱️
+            to="/docs/users/intro">
+            Get Started - 5min ⏱️
           </Link>
         </div>
       </div>

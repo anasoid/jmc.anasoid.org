@@ -28,7 +28,7 @@ Add dependency to last version of **org.anasoid.jmc:jmc-core**
 
 :::
 
-:::caution To access snapshot version use snapshot repository.
+#### To access snapshot version use snapshot repository.
 
 ```shell
 repositories {
@@ -40,7 +40,7 @@ repositories {
 }
 ```
 
-:::
+
 
 Last snapshot version is master-SNAPSHOT.
 
