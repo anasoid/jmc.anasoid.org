@@ -14,7 +14,7 @@ Get started by **looking to [JMC Example](https://github.com/anasoid/jmc-example
 
 Add dependency to last version of **org.anasoid.jmc:jmc-core**
 
-### Dependency
+### Dependencies
 
 :::important Add dependency to Lombok.
 
@@ -40,13 +40,19 @@ repositories {
 }
 ```
 
-
-
-Last snapshot version is master-SNAPSHOT.
+Last snapshot version is **master-SNAPSHOT**.
 
 ```shell
 
     implementation 'org.anasoid.jmc:jmc-core:master-SNAPSHOT'
+
+```
+
+To use Jmeter-plugins add dependency to **jmc-jmeter-plugins**.
+
+```shell
+
+    implementation 'org.anasoid.jmc:jmc-jmeter-plugins:master-SNAPSHOT'
 
 ```
 
@@ -56,6 +62,7 @@ It's recommended to use last stable version.
 
 implementation 'org.anasoid.jmc:jmc-core:![Maven Central](https://img.shields.io/maven-central/v/org.anasoid.jmc/jmc-core?label=%20&style=flat-square)'
 
+implementation 'org.anasoid.jmc:jmc-jmeter-plugins:![Maven Central](https://img.shields.io/maven-central/v/org.anasoid.jmc/jmc-core?label=%20&style=flat-square)'
 
 :::
 
