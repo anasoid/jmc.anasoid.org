@@ -9,10 +9,11 @@ sidebar_position: 10
 1. Java can be edit easily with IDE and also debugged as simple as any java application.
 1. Using java we can use inheritance, and external library to reuse code and writing our library to be reused in future projects.
 1. Java has better performance tha groovy.
+1. Unit test.
 
 # Java Implementation.
 
-To Implement Java you can extends from AbstractJava**xx**Wrapper adn implement execute method, depend on type of testElement, execute has teh same input parameter as JSR223, expected the parameters witch is replaced by a map.
+To Implement Java you can extends from AbstractJava**xx**Wrapper and implement execute method, depend on type of testElement, execute has the same input parameter as JSR223, expected the parameters witch is replaced by a map.
 
 | Class                                | Type          | JSR223 equivalent   |
 | ------------------------------------ | ------------- | ------------------- |
@@ -65,6 +66,8 @@ public class TestJavaSampleListenerWrapperWithParametersKey
 
 ## Parameters
 
+![jmeter-debug-Intellij](/img/jplugins/java-ui.png)
+
 ### Map
 
 :::tip
@@ -77,10 +80,12 @@ All JavaTest implementation can have parameter as Map < String,String > .
 2. **addParameter(String name, String value)** : add key/value.
 3. **List< String > getParametersKey()** : implement this method to validate parameters key: null to skip validation and empty list to not accept parameters.
 
+Execute Method has the Parameters Map as arguments
+
 ### Attributes (Beta)
 
 1. **Simple attribute** (String,integer, boolean) can also be used for configuration.
-2. **complex attribute** : complex attribute (List, Map , composed object, ..) can't be used to be persisted with JMX, but can be used during execution. All those attribute should be annotated with @JmcOmitField.
+2. **Complex attribute** : complex attribute (List, Map , composed object, ..) can't be used to be persisted with JMX, but can be used during execution. All those attribute should be annotated with @JmcOmitField.
 
 :::danger
 Complex attribute should be skipped by annotation **@JmcOmitField**.

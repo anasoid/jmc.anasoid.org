@@ -20,7 +20,7 @@ Add [jmc-core-\*.jar](https://mvnrepository.com/artifact/org.anasoid.jmc/jmc-cor
 
 Also your projects using plugin should be included to Jmeter as plugin, the same way as jmc-plugin-*.jar is installed
 
-## Debug Execution 
+## Debug & Execution 
 
 ### Intellij
 
