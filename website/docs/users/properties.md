@@ -4,6 +4,7 @@ sidebar_position: 80
 
 # Properties
 
+## JmcConfig:
 JMC has it own properties files to manage properties for configuration see **[reference](/docs/reference/intro)**.
 
 :::important
@@ -21,7 +22,7 @@ Class org.anasoid.jmc.core.config.**JmcConfig** give access to read property val
 1. **System properties files** : List of properties file are loaded from system properties file **jmc.configs**, File path separator is "**;**" it can also be add via cls argument (**-Djmc.config=**/../file1.properties**;**/../file2.properties) .
 1. **System properties** : properties can also be add via cls argument (-Dname=value).
 
-#### Local JmcConfig:
+## Local JmcConfig:
 
 The same test can generate many variants of JMX files, the best way is to use local context for jmc config.
 
