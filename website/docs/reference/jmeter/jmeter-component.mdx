@@ -62,7 +62,7 @@ All controller implements interface **ControllerWrapper**.
 | **While Controller**            | ✅      | WhileControllerWrapper           | **Full support** |
 | **Switch Controller**           | ✅      | SwitchControllerWrapper          | **Full support** |
 | **ForEach Controller**          | ✅      | ForeachControllerWrapper         | **Full support** |
-| Module Controller               | ❌      | -                                | -                |
+| **Module Controller**           | ✅      | ModuleControllerWrapper          | **Full support** |
 | Include Controller              | ❌      | -                                | -                |
 | **Transaction Controller**      | ✅      | TransactionControllerWrapper     | **Full support** |
 | **Recording Controller**        | ✅      | RecordingControllerWrapper       | **Full support** |
@@ -81,7 +81,7 @@ All listeners implements interface **SampleListenerWrapper**.
 | **View Results in Table**           | ✅        | TableVisualizerWrapper               | **Full support** |
 | **Simple Data Writer**              | ✅        | SimpleDataWriterWrapper              | **Full support** |
 | **Aggregate Graph**                 | ✅        | AggregateGraphWrapper                | **Full support** |
-| \*\*Response Time Graph             | ❌        | -                                    | -                |
+| Response Time Graph                 | ❌        | -                                    | -                |
 | Mailer Visualizer                   | ❌        | -                                    | -                |
 | BeanShell Listener                  | **never** | -                                    | **DEPRECATED**   |
 | **Summary Report**                  | ✅        | SummaryReportWrapper                 | **Full support** |
@@ -193,11 +193,11 @@ All Post-Processors implements interface **PostProcessorWrapper**.
 
 ## Miscellaneous Features
 
-| Component                                              | covered | class           | Description      |
-| ------------------------------------------------------ | ------- | --------------- | ---------------- |
-| **Test Plan**                                          | ✅      | TestPlanWrapper | **Full support** |
-| SSL Manager                                            | ❌      | -               | **Full support** |
-| HTTP(S) Test Script Recorder (was: HTTP Proxy Server ) | ❌      | -               | **Full support** |
-| HTTP Mirror Server                                     | ❌      | -               | **Full support** |
-| Property Display                                       | ❌      | -               | **Full support** |
-| Test Fragment                                          | ❌      | -               | **Full support** |
+| Component                                              | covered | class               | Description      |
+| ------------------------------------------------------ | ------- | ------------------- | ---------------- |
+| **Test Plan**                                          | ✅      | TestPlanWrapper     | **Full support** |
+| SSL Manager                                            | ❌      | -                   | **Full support** |
+| HTTP(S) Test Script Recorder (was: HTTP Proxy Server ) | ❌      | -                   | **Full support** |
+| HTTP Mirror Server                                     | ❌      | -                   | **Full support** |
+| Property Display                                       | ❌      | -                   | **Full support** |
+| Test Fragment                                          | ✅      | TestFragmentWrapper | **Full support** |
