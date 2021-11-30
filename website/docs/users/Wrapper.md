@@ -49,10 +49,10 @@ For same simple object a simplified add method is present, for example : argumen
 
 ## Attributes
 
-### childs (AKA children)
+### Children 
 
-Childs attribute contain the list of children of testElement they are equivalent the children nodes in GUI.
-addChild/addChilds are not available but depends of node type the correct method is available :
+Children attribute contain the list of children of testElement they are equivalent the children nodes in GUI.
+addChild/addChildren are not available but depends of node type the correct method is available :
 
 | Methods                           | Available for                      |
 | ---------------------------------- | ---------------------------------- |

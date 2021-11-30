@@ -25,7 +25,7 @@ public class WaitInterceptor implements PrepareInterceptor {
   public void prepare(TestElementWrapper<?> testElementWrapper) {
     HTTPSamplerProxyWrapper sampler = (HTTPSamplerProxyWrapper) testElementWrapper;
 
-    sampler.getChilds().add(
+    sampler.getChildren().add(
         UniformRandomTimerWrapper.builder()
             .withName("Wait default")
             .withDelay(0)
