@@ -66,9 +66,6 @@ implementation 'org.anasoid.jmc:jmc-jmeter-plugins:![Maven Central](https://img.
 
 :::
 
-## Configuration
-
-To generate JMX file you don't need to have Jmeter installed, to execute Test with JMC you need Jmeter installed and the environnement variable **JMETER_HOME** to be configured.
 
 ## Write your test
 
